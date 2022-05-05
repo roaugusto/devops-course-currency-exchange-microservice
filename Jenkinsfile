@@ -9,9 +9,9 @@ pipeline {
 		stages {
 			stage('Build') {
 				steps {
-					sh '''
-						mvn --version
-					'''
+					sh '''#!/bin/bash
+                 echo "hello world" 
+         '''
 					echo "Build"
 				}
 			}
