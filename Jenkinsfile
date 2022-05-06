@@ -1,19 +1,16 @@
 pipeline {
 		// agent any
-		agent { 
-			docker { 
-				image 'maven:3.6.3' 
-			} 
-		}
-
 		stages {
 			stage('Build') {
+				agent { 
+					docker { 
+						image 'maven:3.6.3' 
+					} 
+				}
 				steps {
-        	dir('/opt') {
-          	sh 'mvn --version'
-						echo "Build"
-          }
-        }
+					sh 'mvn --version'
+					echo "Build"
+				}
 			}
 			stage('Test') {
 				steps {
