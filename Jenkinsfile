@@ -9,9 +9,11 @@ pipeline {
 		stages {
 			stage('Build') {
 				steps {
-					sh 'mvn --version'
-					echo "Build"
-				}
+        	dir('/opt') {
+          	sh 'mvn --version'
+						echo "Build"
+          }
+        }
 			}
 			stage('Test') {
 				steps {
