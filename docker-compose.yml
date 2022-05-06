@@ -12,3 +12,6 @@ services:
       - ./docker/jenkins:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/local/bin/docker:/usr/local/bin/docker
+      - /var/docker/jenkins/startup-agent.sh:/var/startup.sh
+      - /var/docker/jenkins/jenkins:/var/jenkins
+

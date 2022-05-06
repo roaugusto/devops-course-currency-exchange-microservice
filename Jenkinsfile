@@ -2,14 +2,14 @@ pipeline {
 		// agent any
 		agent { 
 			docker { 
-				image 'maven:3.8.5-jdk-11'
+				image 'node:13.8'
 				args '-u root'
 			} 
 		}
 		stages {
 			stage('Build') {
 				steps {
-					sh('mvn --version')
+					sh 'node --version'
 					echo "Build"
 				}
 			}
