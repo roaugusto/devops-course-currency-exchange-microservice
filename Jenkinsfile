@@ -18,7 +18,7 @@ pipeline {
 					echo "Test"
 				}
 			}
-			stage('BIntegration Testuild') {
+			stage('Integration Test') {
 				steps {
 					echo "Integration Test"
 				}
