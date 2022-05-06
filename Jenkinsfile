@@ -3,7 +3,7 @@ pipeline {
 		agent { 
 			docker { 
 				image 'maven:3.8.5-jdk-11'
-				args '-v /var/jenkins_home/workspace/:/var/jenkins_home/workspace/ -w /opt/maven'
+				args '-v /var/jenkins_home/workspace:/var/jenkins_home/workspace'
 			} 
 		}
 		stages {
