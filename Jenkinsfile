@@ -2,7 +2,7 @@ pipeline {
 		// agent any
 		agent { 
 			docker { 
-				image 'node:13.8'
+				image 'node:latest'
 				args '-u root'
 			} 
 		}
